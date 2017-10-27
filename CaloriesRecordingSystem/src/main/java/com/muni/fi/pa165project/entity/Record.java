@@ -1,14 +1,8 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package com.muni.fi.pa165project.entity;
 
 import com.muni.fi.pa165project.enums.Difficulty;
 
 import javax.persistence.*;
-import javax.validation.constraints.NotNull;
 import java.io.Serializable;
 import java.time.LocalDateTime;
 
@@ -22,17 +16,15 @@ public class Record implements Serializable {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @NotNull
     @ManyToOne(optional=false)
     private Activity activity;
 
-    @NotNull
+    @ManyToOne(optional=false)
     private User user;
 
-    @NotNull
+    @Column(nullable = false)
     private LocalDateTime time;
 
-    @NotNull
     @Enumerated(EnumType.STRING)
     private Difficulty difficulty;
 
