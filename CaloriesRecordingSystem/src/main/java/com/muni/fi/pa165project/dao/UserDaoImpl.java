@@ -24,10 +24,8 @@ public class UserDaoImpl implements UserDao {
 
     @Override
     public User findByUserName(String username) {
-        TypedQuery<User> query = em.createQuery(
-                "SELECT u FROM User u WHERE u.name LIKE :username",
-                User.class);
-        query.setParameter("username", "%"+username+"%");
+        TypedQuery<User> query = em.createQuery("SELECT u FROM User u WHERE u.settings.username LIKE :username", User.class);
+        query.setParameter("username", username);
 
         return query.getSingleResult();
     }
@@ -59,8 +57,7 @@ public class UserDaoImpl implements UserDao {
 
     @Override
     public List<User> findAll() {
-        return this.em.createQuery("SELECT u from User u",
-                User.class).getResultList();
+        return this.em.createQuery("SELECT u from User u", User.class).getResultList();
     }
 
 }

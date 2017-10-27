@@ -28,7 +28,7 @@ public class Record implements Serializable {
     @Enumerated(EnumType.STRING)
     private Difficulty difficulty;
 
-    private int weight;
+    private double weight;
 
     private int burnedCalories;
 
@@ -100,7 +100,7 @@ public class Record implements Serializable {
         this.user = user;
     }
 
-    public int getWeight() {
+    public double getWeight() {
         return weight;
     }
 
@@ -116,7 +116,7 @@ public class Record implements Serializable {
         result = prime * result + ((time == null) ? 0 : time.hashCode());
         result = prime * result + ((activity == null) ? 0 : activity.hashCode());
         result = prime * result + ((difficulty == null) ? 0 : difficulty.hashCode());
-        result = prime * result + weight;
+        result = prime * result + ((int)weight);
         result = prime * result + burnedCalories;
         result = prime * result + distance;
         result = prime * result + duration;
