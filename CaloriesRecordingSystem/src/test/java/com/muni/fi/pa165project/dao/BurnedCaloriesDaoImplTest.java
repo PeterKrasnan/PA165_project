@@ -10,7 +10,6 @@ import com.muni.fi.pa165project.entity.Activity;
 import com.muni.fi.pa165project.entity.BurnedCalories;
 import com.muni.fi.pa165project.enums.Difficulty;
 import java.util.List;
-import javax.persistence.EntityManager;
 import javax.transaction.Transactional;
 import org.junit.Assert;
 import org.junit.Before;
