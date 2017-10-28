@@ -28,35 +28,34 @@ public class ActivityDaoImplTest {
 
     private Activity activity;
 
-//    private Set<BurnedCalories> burnedCaloriesRecords;
+    //private Set<BurnedCalories> burnedCaloriesRecords;
 
     @Before
     public void init() {
-        activity = new Activity() {
-//            setBurnedCaloriesRecords( burnedCaloriesRecords);
-
-        };
+        activity = new Activity();
         activity.setDescription("description");
         activity.setName("Initial Activity");
-//        burnedCaloriesRecords = new HashSet<BurnedCalories>() {
-//            {
-//                add(new BurnedCalories() {{
-//                    setWeightRange(50);
-//                    setActivity(activity);
-//                    setDifficulty(Difficulty.EASY);
-//                }});
-//                add(new BurnedCalories() {{
-//                    setWeightRange(100);
-//                    setActivity(activity);
-//                    setDifficulty(Difficulty.HARD);
-//                }});
-//                add(new BurnedCalories() {{
-//                    setWeightRange(200);
-//                    setActivity(activity);
-//                    setDifficulty(Difficulty.HARD);
-//                }});
-//            }
-//        };
+
+        //            setBurnedCaloriesRecords( burnedCaloriesRecords);
+        //        burnedCaloriesRecords = new HashSet<BurnedCalories>() {
+        //            {
+        //                add(new BurnedCalories() {{
+        //                    setWeightRange(50);
+        //                    setActivity(activity);
+        //                    setDifficulty(Difficulty.EASY);
+        //                }});
+        //                add(new BurnedCalories() {{
+        //                    setWeightRange(100);
+        //                    setActivity(activity);
+        //                    setDifficulty(Difficulty.HARD);
+        //                }});
+        //                add(new BurnedCalories() {{
+        //                    setWeightRange(200);
+        //                    setActivity(activity);
+        //                    setDifficulty(Difficulty.HARD);
+        //                }});
+        //            }
+        //        };
 
         activityDao.create(activity);
     }
@@ -64,9 +63,7 @@ public class ActivityDaoImplTest {
     @Test
     @Rollback(true)
     public void createTest() {
-        Activity a = new Activity() {
-
-        };
+        Activity a = new Activity();
 
         a.setName("A Activity");
         a.setBurnedCaloriesRecords(null);
@@ -105,7 +102,7 @@ public class ActivityDaoImplTest {
 
         int finalCount = activityDao.findAll().size();
 
-        Assert.assertTrue("Activity was not deleted", (initialCount != (finalCount + 1)));
+        Assert.assertTrue("Activity was not deleted", (initialCount == (finalCount + 1)));
     }
 
     @Test
@@ -137,13 +134,14 @@ public class ActivityDaoImplTest {
     }
 
 //    @Test
-//    public void findByDifficulty() {
-//        List<Activity> activities = activityDao.findByDifficulty(Difficulty.HARD);
-//
-//        Assert.assertTrue("Activities is null", activities != null);
-//        Assert.assertTrue("Activities is empty", !activities.isEmpty());
-//        Assert.assertTrue("Activities have incorrect number of results", activities.size() == 2);
-//    }
+    //    @Rollback(true)
+    //    public void findByDifficulty() {
+    //        List<Activity> activities = activityDao.findByDifficulty(Difficulty.HARD);
+    //
+    //        Assert.assertTrue("Activities is null", activities != null);
+    //        Assert.assertTrue("Activities are empty", !activities.isEmpty());
+    //        Assert.assertTrue("Activities have incorrect number of results", activities.size() == 2);
+    //    }
 
 
 }
