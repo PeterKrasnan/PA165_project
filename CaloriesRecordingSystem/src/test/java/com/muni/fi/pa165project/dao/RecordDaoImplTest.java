@@ -4,7 +4,6 @@ import com.muni.fi.pa165project.config.TestConfig;
 import com.muni.fi.pa165project.entity.Activity;
 import com.muni.fi.pa165project.entity.Record;
 import com.muni.fi.pa165project.entity.User;
-import com.muni.fi.pa165project.enums.Difficulty;
 import com.muni.fi.pa165project.enums.GenderEnum;
 import com.muni.fi.pa165project.structures.UserSettings;
 import java.time.LocalDate;
@@ -46,6 +45,7 @@ public class RecordDaoImplTest {
         this.act = new Activity();
         this.act.setName("Run");
         this.act.setDescription("running by feet");
+        //this.act.setCategory(null);
     }
     
     @Before
@@ -64,10 +64,10 @@ public class RecordDaoImplTest {
     @Before
     public void initRecord() {
         this.record = new Record();
-        this.record.setTime(LocalDateTime.now());
-        this.record.setDifficulty(Difficulty.MEDIUM);
+        this.record.setAtTime(LocalDateTime.now());
         this.record.setActivity(this.act);
         this.record.setUser(this.user);
+        this.record.setDistance(100);
     }
     
     /**
@@ -101,11 +101,11 @@ public class RecordDaoImplTest {
         usDao.create(user);
         rcDao.create(record);
 
-        record.setDifficulty(Difficulty.EASY);
+        record.setDistance(200);
         rcDao.update(record);
         
         Record dbRec = rcDao.findById(record.getId());
-        Assert.assertEquals(Difficulty.EASY, dbRec.getDifficulty());
+        Assert.assertEquals(200, dbRec.getDistance());
         Assert.assertEquals(this.user, dbRec.getUser());
     }
 
@@ -163,8 +163,8 @@ public class RecordDaoImplTest {
         
         //create another record
         Record newRec = new Record();
-        newRec.setTime(LocalDateTime.now());
-        newRec.setDifficulty(Difficulty.EASY);
+        newRec.setAtTime(LocalDateTime.now());
+        newRec.setDistance(200);
         newRec.setActivity(this.act);
         newRec.setUser(this.user);
         rcDao.create(newRec);
@@ -199,8 +199,8 @@ public class RecordDaoImplTest {
         
         //create another record
         Record newRec = new Record();
-        newRec.setTime(LocalDateTime.now().minusDays(1));
-        newRec.setDifficulty(Difficulty.HARD);
+        newRec.setAtTime(LocalDateTime.now().minusDays(1));
+        newRec.setDistance(200);
         newRec.setActivity(this.act);
         newRec.setUser(this.user);
         rcDao.create(newRec);
@@ -236,8 +236,8 @@ public class RecordDaoImplTest {
         
         //create another record
         Record newRec = new Record();
-        newRec.setTime(yesterday);
-        newRec.setDifficulty(Difficulty.HARD);
+        newRec.setAtTime(yesterday);
+        newRec.setDistance(200);
         newRec.setActivity(this.act);
         newRec.setUser(this.user);
         rcDao.create(newRec);

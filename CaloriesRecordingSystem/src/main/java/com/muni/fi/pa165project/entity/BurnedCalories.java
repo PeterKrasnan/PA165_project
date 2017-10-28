@@ -1,10 +1,7 @@
 package com.muni.fi.pa165project.entity;
 
-import com.muni.fi.pa165project.enums.Difficulty;
 import java.io.Serializable;
 import javax.persistence.Entity;
-import javax.persistence.EnumType;
-import javax.persistence.Enumerated;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -12,7 +9,6 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 import javax.persistence.UniqueConstraint;
-
 import org.hibernate.annotations.Immutable;
 
 /**
@@ -21,15 +17,12 @@ import org.hibernate.annotations.Immutable;
  */
 @Entity
 @Immutable
-@Table(uniqueConstraints = { @UniqueConstraint(columnNames = { "upperWeightBoundary", "activity_id", "difficulty" }) })
+@Table(uniqueConstraints = { @UniqueConstraint(columnNames = { "upperWeightBoundary", "activity_id", "amount" }) })
 public class BurnedCalories implements Serializable{
     
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-
-    @Enumerated(EnumType.STRING)
-    private Difficulty difficulty;
     
     @ManyToOne(optional=false)
     @JoinColumn(name = "activity_id")
@@ -45,14 +38,6 @@ public class BurnedCalories implements Serializable{
 
     public void setId(Long id) {
         this.id = id;
-    }
-        
-    public Difficulty getDifficulty() {
-        return difficulty;
-    }
-
-    public void setDifficulty(Difficulty difficulty) {
-        this.difficulty = difficulty;
     }
 
     public Activity getActivity() {
@@ -84,8 +69,8 @@ public class BurnedCalories implements Serializable{
         final int prime = 31;
         int result = 1;
         result = prime * result + upperWeightBoundary;
+        result = prime * result + amount;
         result = prime * result + ((activity == null) ? 0 : activity.hashCode());
-        result = prime * result + ((difficulty == null) ? 0 : difficulty.hashCode());
         return result;
     }
     
@@ -109,10 +94,8 @@ public class BurnedCalories implements Serializable{
         if (upperWeightBoundary != other.upperWeightBoundary)
           return false;
         
-        if (difficulty == null) {
-            return false;
-        } else if (!difficulty.equals(other.difficulty))
-            return false;
+        if (amount != other.amount)
+          return false;
         
         return true;
     }

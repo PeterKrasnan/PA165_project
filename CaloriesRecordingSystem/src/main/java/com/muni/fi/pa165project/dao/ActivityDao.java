@@ -54,7 +54,7 @@ public interface ActivityDao {
 	
 	/**
 	 * Finds all activities from category
-	 * @param difficulty
+	 * @param category
 	 * @return 
 	 */
 	List<Activity> findByCategory(Category category);

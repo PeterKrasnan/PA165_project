@@ -1,7 +1,5 @@
 package com.muni.fi.pa165project.entity;
 
-import com.muni.fi.pa165project.enums.Category;
-
 import javax.persistence.*;
 import java.io.Serializable;
 import java.time.LocalDateTime;
@@ -24,9 +22,6 @@ public class Record implements Serializable {
 
     @Column(nullable = false)
     private LocalDateTime atTime;
-
-    @Enumerated(EnumType.STRING)
-    private Category category;
 
     private double weight;
 
@@ -58,14 +53,6 @@ public class Record implements Serializable {
 
     public void setBurnedCalories(int burnedCalories) {
         this.burnedCalories = burnedCalories;
-    }
-
-    public Category getCategory() {
-        return category;
-    }
-
-    public void setCategory(Category category) {
-        this.category = category;
     }
 
     public int getDistance() {
@@ -115,7 +102,6 @@ public class Record implements Serializable {
         result = prime * result + ((user == null) ? 0 : user.hashCode());
         result = prime * result + ((atTime == null) ? 0 : atTime.hashCode());
         result = prime * result + ((activity == null) ? 0 : activity.hashCode());
-        result = prime * result + ((category == null) ? 0 : category.hashCode());
         result = prime * result + ((int)weight);
         result = prime * result + burnedCalories;
         result = prime * result + distance;
@@ -166,14 +152,6 @@ public class Record implements Serializable {
             return false;
         } else {
             if (!user.equals(other.user)) {
-                return false;
-            }
-        }
-
-        if (category == null) {
-            return false;
-        } else {
-            if (!category.equals(other.category)) {
                 return false;
             }
         }

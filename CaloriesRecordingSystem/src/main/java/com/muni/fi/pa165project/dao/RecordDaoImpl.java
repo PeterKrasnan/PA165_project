@@ -62,7 +62,7 @@ public class RecordDaoImpl implements RecordDao {
 	
 	@Override
 	public List<Record> findByTime(LocalDateTime from, LocalDateTime to) {
-		return this.em.createQuery("SELECT r from Record r WHERE r.time BETWEEN :from AND :to",
+		return this.em.createQuery("SELECT r from Record r WHERE r.atTime BETWEEN :from AND :to",
 				Record.class)
 				.setParameter("from", from)
 				.setParameter("to", to)

@@ -1,14 +1,12 @@
 package com.muni.fi.pa165project.dao;
 
 import com.muni.fi.pa165project.entity.Activity;
-import com.muni.fi.pa165project.entity.BurnedCalories;
-import com.muni.fi.pa165project.enums.Difficulty;
+import com.muni.fi.pa165project.enums.Category;
 import org.springframework.stereotype.Repository;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.persistence.TypedQuery;
 import java.util.List;
-import java.util.ArrayList;
 
 /**
  *
@@ -67,12 +65,11 @@ public class ActivityDaoImpl implements ActivityDao{
     }
     
     @Override
-    public List<Activity> findByDifficulty(Difficulty difficulty){
+    public List<Activity> findByCategory(Category category){
         TypedQuery<Activity> query;
         query = this.em.createQuery("SELECT a FROM Activity a "
-                + "JOIN a.burnedCaloriesRecords b "
-                + "WHERE b.difficulty = :diff", Activity.class);
-        query.setParameter("diff", difficulty);
+                + "WHERE a.category = :cat", Activity.class);
+        query.setParameter("cat", category);
         
         return query.getResultList();
     }
