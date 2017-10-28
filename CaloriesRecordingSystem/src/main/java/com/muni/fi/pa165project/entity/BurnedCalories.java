@@ -13,12 +13,15 @@ import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 import javax.persistence.UniqueConstraint;
 
+import org.hibernate.annotations.Immutable;
+
 /**
  *
  * @author Radim Podola
  */
 @Entity
-@Table(uniqueConstraints = { @UniqueConstraint(columnNames = { "weightRange", "activity_id" }) })
+@Immutable
+@Table(uniqueConstraints = { @UniqueConstraint(columnNames = { "upperWeightBoundary", "activity_id", "difficulty" }) })
 public class BurnedCalories implements Serializable{
     
     @Id
@@ -32,8 +35,8 @@ public class BurnedCalories implements Serializable{
     @JoinColumn(name = "activity_id")
     private Activity activity;
     
-    private int weightRange;
-    
+    private int upperWeightBoundary;
+ 
     private int amount;
 
     public Long getId() {
@@ -60,14 +63,14 @@ public class BurnedCalories implements Serializable{
         this.activity = activity;
     }
 
-    public int getWeightRange() {
-        return weightRange;
+    public int getUpperWeightBoundary() {
+        return upperWeightBoundary;
     }
 
-    public void setWeightRange(int weightRange) {
-        this.weightRange = weightRange;
+    public void setUpperWeightBoundary(int weight) {
+        this.upperWeightBoundary = weight;
     }
-
+    
     public float getAmount() {
         return amount;
     }
@@ -80,8 +83,7 @@ public class BurnedCalories implements Serializable{
     public int hashCode() {
         final int prime = 31;
         int result = 1;
-        result = prime * result + Math.round(amount);
-        result = prime * result + weightRange;
+        result = prime * result + upperWeightBoundary;
         result = prime * result + ((activity == null) ? 0 : activity.hashCode());
         result = prime * result + ((difficulty == null) ? 0 : difficulty.hashCode());
         return result;
@@ -104,11 +106,8 @@ public class BurnedCalories implements Serializable{
         } else if (!activity.equals(other.activity))
             return false;
         
-        if (weightRange != other.weightRange)
-            return false;
-        
-        if (amount != other.amount)
-            return false;
+        if (upperWeightBoundary != other.upperWeightBoundary)
+          return false;
         
         if (difficulty == null) {
             return false;

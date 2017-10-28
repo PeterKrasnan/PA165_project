@@ -54,17 +54,17 @@ public class BurnedCaloriesDaoImplTest {
 		createDummyActivity();
 
 		this.bc1 = new BurnedCalories();
-		this.bc1.setWeightRange(100);
+		this.bc1.setUpperWeightBoundary(100);
 		this.bc1.setActivity(ac);
 		this.bc1.setDifficulty(Difficulty.MEDIUM);
 		
 		this.bc2 = new BurnedCalories();
-		this.bc2.setWeightRange(200);
+		this.bc2.setUpperWeightBoundary(200);
 		this.bc2.setActivity(ac);
 		this.bc2.setDifficulty(Difficulty.EASY);
 		
 		this.bc3 = new BurnedCalories();
-		this.bc3.setWeightRange(300);
+		this.bc3.setUpperWeightBoundary(300);
 		this.bc3.setActivity(ac);
 		this.bc3.setDifficulty(Difficulty.HARD);
 
@@ -78,7 +78,7 @@ public class BurnedCaloriesDaoImplTest {
 	public void testCreate() {
 		BurnedCalories bc = new BurnedCalories();
 
-		bc.setWeightRange(75);
+		bc.setUpperWeightBoundary(75);
 		bc.setAmount(200);
 		bc.setDifficulty(Difficulty.MEDIUM);
 		bc.setActivity(ac);
@@ -92,12 +92,12 @@ public class BurnedCaloriesDaoImplTest {
 	@Test
 	@Rollback(true)
 	public void testUpdate() {
-		this.bc2.setWeightRange(201);
+		this.bc2.setUpperWeightBoundary(201);
 		this.bcDao.update(bc2);
 
 		BurnedCalories bc2FromDB = this.bcDao.findById(this.bc2.getId());
 
-		Assert.assertEquals(201, bc2FromDB.getWeightRange());
+		Assert.assertEquals(201, bc2FromDB.getUpperWeightBoundary());
 	}
 
 	@Test
