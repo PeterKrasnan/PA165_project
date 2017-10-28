@@ -16,6 +16,7 @@ import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.test.annotation.Rollback;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
@@ -85,6 +86,17 @@ public class BurnedCaloriesDaoImplTest {
 		Assert.assertTrue(bcs.size() == 4);
 	}
 
+	@Test(expected = DataIntegrityViolationException.class)
+	@Rollback(true)
+	public void testCreateWithoutActivity() {
+		BurnedCalories bc = new BurnedCalories();
+
+		bc.setUpperWeightBoundary(75);
+		bc.setAmount(200);
+
+		this.bcDao.create(bc);
+	}
+	
 	@Test
 	@Rollback(true)
 	public void testUpdate() {
