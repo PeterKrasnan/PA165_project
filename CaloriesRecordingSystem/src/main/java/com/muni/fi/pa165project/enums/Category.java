@@ -9,8 +9,14 @@ package com.muni.fi.pa165project.enums;
  *
  * @author Radim Podola
  */
-public enum Difficulty {
-    EASY,
-    MEDIUM,
-    HARD
+public enum Category {
+    CYCLING,
+    RUNNING,
+    WALKING,
+	SWIMMING,
+	AEROBICS,
+	DANCING,
+	EXERCISE,
+	WORK,
+	HOBBY
 }

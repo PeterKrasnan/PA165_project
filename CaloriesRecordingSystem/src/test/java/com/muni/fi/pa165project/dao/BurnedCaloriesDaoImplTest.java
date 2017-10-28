@@ -8,7 +8,7 @@ package com.muni.fi.pa165project.dao;
 import com.muni.fi.pa165project.config.TestConfig;
 import com.muni.fi.pa165project.entity.Activity;
 import com.muni.fi.pa165project.entity.BurnedCalories;
-import com.muni.fi.pa165project.enums.Difficulty;
+import com.muni.fi.pa165project.enums.Category;
 import java.util.List;
 import javax.transaction.Transactional;
 import org.junit.Assert;
@@ -45,6 +45,7 @@ public class BurnedCaloriesDaoImplTest {
 		this.ac = new Activity();
 		this.ac.setName("Activity 1");
 		this.ac.setDescription("test activity");
+		this.ac.setCategory(Category.RUNNING);
 		this.acDao.create(ac);
 	}
 	
@@ -55,17 +56,14 @@ public class BurnedCaloriesDaoImplTest {
 		this.bc1 = new BurnedCalories();
 		this.bc1.setUpperWeightBoundary(100);
 		this.bc1.setActivity(ac);
-		this.bc1.setDifficulty(Difficulty.MEDIUM);
 		
 		this.bc2 = new BurnedCalories();
 		this.bc2.setUpperWeightBoundary(200);
 		this.bc2.setActivity(ac);
-		this.bc2.setDifficulty(Difficulty.EASY);
 		
 		this.bc3 = new BurnedCalories();
 		this.bc3.setUpperWeightBoundary(300);
 		this.bc3.setActivity(ac);
-		this.bc3.setDifficulty(Difficulty.HARD);
 
 		this.bcDao.create(bc1);
 		this.bcDao.create(bc2);
@@ -79,7 +77,6 @@ public class BurnedCaloriesDaoImplTest {
 
 		bc.setUpperWeightBoundary(75);
 		bc.setAmount(200);
-		bc.setDifficulty(Difficulty.MEDIUM);
 		bc.setActivity(ac);
 
 		this.bcDao.create(bc);

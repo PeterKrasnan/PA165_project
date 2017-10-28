@@ -6,7 +6,7 @@
 package com.muni.fi.pa165project.dao;
 
 import com.muni.fi.pa165project.entity.Activity;
-import com.muni.fi.pa165project.enums.Difficulty;
+import com.muni.fi.pa165project.enums.Category;
 import java.util.List;
 
 /**
@@ -53,10 +53,10 @@ public interface ActivityDao {
 	List<Activity> findByName(String text);
 	
 	/**
-	 * Finds all activities which have specified difficulty(within BurnedCalories)
+	 * Finds all activities from category
 	 * @param difficulty
 	 * @return 
 	 */
-	List<Activity> findByDifficulty(Difficulty difficulty);
+	List<Activity> findByCategory(Category category);
 	
 }

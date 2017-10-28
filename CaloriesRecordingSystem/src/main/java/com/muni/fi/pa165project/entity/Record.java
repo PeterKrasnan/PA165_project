@@ -1,6 +1,6 @@
 package com.muni.fi.pa165project.entity;
 
-import com.muni.fi.pa165project.enums.Difficulty;
+import com.muni.fi.pa165project.enums.Category;
 
 import javax.persistence.*;
 import java.io.Serializable;
@@ -23,10 +23,10 @@ public class Record implements Serializable {
     private User user;
 
     @Column(nullable = false)
-    private LocalDateTime time;
+    private LocalDateTime atTime;
 
     @Enumerated(EnumType.STRING)
-    private Difficulty difficulty;
+    private Category category;
 
     private double weight;
 
@@ -44,12 +44,12 @@ public class Record implements Serializable {
         this.id = id;
     }
 
-    public LocalDateTime getTime() {
-        return time;
+    public LocalDateTime getAtTime() {
+        return atTime;
     }
 
-    public void setTime(LocalDateTime time) {
-        this.time = time;
+    public void setAtTime(LocalDateTime atTime) {
+        this.atTime = atTime;
     }
 
     public int getBurnedCalories() {
@@ -60,12 +60,12 @@ public class Record implements Serializable {
         this.burnedCalories = burnedCalories;
     }
 
-    public Difficulty getDifficulty() {
-        return difficulty;
+    public Category getCategory() {
+        return category;
     }
 
-    public void setDifficulty(Difficulty difficulty) {
-        this.difficulty = difficulty;
+    public void setCategory(Category category) {
+        this.category = category;
     }
 
     public int getDistance() {
@@ -113,9 +113,9 @@ public class Record implements Serializable {
         final int prime = 31;
         int result = 1;
         result = prime * result + ((user == null) ? 0 : user.hashCode());
-        result = prime * result + ((time == null) ? 0 : time.hashCode());
+        result = prime * result + ((atTime == null) ? 0 : atTime.hashCode());
         result = prime * result + ((activity == null) ? 0 : activity.hashCode());
-        result = prime * result + ((difficulty == null) ? 0 : difficulty.hashCode());
+        result = prime * result + ((category == null) ? 0 : category.hashCode());
         result = prime * result + ((int)weight);
         result = prime * result + burnedCalories;
         result = prime * result + distance;
@@ -154,10 +154,10 @@ public class Record implements Serializable {
             }
         }
 
-        if (time == null) {
+        if (atTime == null) {
             return false;
         } else {
-            if (!time.equals(other.time)) {
+            if (!atTime.equals(other.atTime)) {
                 return false;
             }
         }
@@ -170,10 +170,10 @@ public class Record implements Serializable {
             }
         }
 
-        if (difficulty == null) {
+        if (category == null) {
             return false;
         } else {
-            if (!difficulty.equals(other.difficulty)) {
+            if (!category.equals(other.category)) {
                 return false;
             }
         }
