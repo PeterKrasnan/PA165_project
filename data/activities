@@ -1,0 +1,922 @@
+{
+  "activities": [
+    {
+      "calories": {
+        "59": 384, 
+        "70": 457, 
+        "82": 531, 
+        "93": 605
+      }, 
+      "name": "Aerobics, general"
+    }, 
+    {
+      "calories": {
+        "59": 413, 
+        "70": 493, 
+        "82": 572, 
+        "93": 651
+      }, 
+      "name": "Aerobics, high impact"
+    }, 
+    {
+      "calories": {
+        "59": 295, 
+        "70": 352, 
+        "82": 409, 
+        "93": 465
+      }, 
+      "name": "Aerobics, low impact"
+    }, 
+    {
+      "calories": {
+        "59": 502, 
+        "70": 598, 
+        "82": 695, 
+        "93": 791
+      }, 
+      "name": "Aerobics, step aerobics"
+    }, 
+    {
+      "calories": {
+        "59": 207, 
+        "70": 246, 
+        "82": 286, 
+        "93": 326
+      }, 
+      "name": "Archery"
+    }, 
+    {
+      "calories": {
+        "59": 413, 
+        "70": 493, 
+        "82": 572, 
+        "93": 651
+      }, 
+      "name": "Backpacking, Hiking with pack"
+    }, 
+    {
+      "calories": {
+        "59": 266, 
+        "70": 317, 
+        "82": 368, 
+        "93": 419
+      }, 
+      "name": "Badminton"
+    }, 
+    {
+      "calories": {
+        "59": 236, 
+        "70": 281, 
+        "82": 327, 
+        "93": 372
+      }, 
+      "name": "Bagging grass, leaves"
+    }, 
+    {
+      "calories": {
+        "59": 148, 
+        "70": 176, 
+        "82": 204, 
+        "93": 233
+      }, 
+      "name": "Bakery, light effort"
+    }, 
+    {
+      "calories": {
+        "59": 266, 
+        "70": 317, 
+        "82": 368, 
+        "93": 419
+      }, 
+      "name": "Ballet, twist, jazz, tap"
+    }, 
+    {
+      "calories": {
+        "59": 325, 
+        "70": 387, 
+        "82": 449, 
+        "93": 512
+      }, 
+      "name": "Ballroom dancing, fast"
+    }, 
+    {
+      "calories": {
+        "59": 177, 
+        "70": 211, 
+        "82": 245, 
+        "93": 279
+      }, 
+      "name": "Ballroom dancing, slow"
+    }, 
+    {
+      "calories": {
+        "59": 472, 
+        "70": 563, 
+        "82": 654, 
+        "93": 745
+      }, 
+      "name": "Basketball game, competitive"
+    }, 
+    {
+      "calories": {
+        "59": 354, 
+        "70": 422, 
+        "82": 490, 
+        "93": 558
+      }, 
+      "name": "Basketball, playing, non game"
+    }, 
+    {
+      "calories": {
+        "59": 266, 
+        "70": 317, 
+        "82": 368, 
+        "93": 419
+      }, 
+      "name": "Basketball, shooting baskets"
+    }, 
+    {
+      "calories": {
+        "59": 384, 
+        "70": 457, 
+        "82": 531, 
+        "93": 605
+      }, 
+      "name": "Basketball, wheelchair"
+    }, 
+    {
+      "calories": {
+        "59": 207, 
+        "70": 246, 
+        "82": 286, 
+        "93": 326
+      }, 
+      "name": "Bathing dog"
+    }, 
+    {
+      "calories": {
+        "59": 148, 
+        "70": 176, 
+        "82": 204, 
+        "93": 233
+      }, 
+      "name": "Bird watching"
+    }, 
+    {
+      "calories": {
+        "59": 148, 
+        "70": 176, 
+        "82": 204, 
+        "93": 233
+      }, 
+      "name": "Boating, power, speed boat"
+    }, 
+    {
+      "calories": {
+        "59": 177, 
+        "70": 211, 
+        "82": 245, 
+        "93": 279
+      }, 
+      "name": "Bowling"
+    }, 
+    {
+      "calories": {
+        "59": 708, 
+        "70": 844, 
+        "82": 981, 
+        "93": 1117
+      }, 
+      "name": "Boxing, in ring"
+    }, 
+    {
+      "calories": {
+        "59": 354, 
+        "70": 422, 
+        "82": 490, 
+        "93": 558
+      }, 
+      "name": "Boxing, punching bag"
+    }, 
+    {
+      "calories": {
+        "59": 531, 
+        "70": 633, 
+        "82": 735, 
+        "93": 838
+      }, 
+      "name": "Boxing, sparring"
+    }, 
+    {
+      "calories": {
+        "59": 207, 
+        "70": 246, 
+        "82": 286, 
+        "93": 326
+      }, 
+      "name": "Calisthenics, light, pushups, situps\u0085"
+    }, 
+    {
+      "calories": {
+        "59": 472, 
+        "70": 563, 
+        "82": 654, 
+        "93": 745
+      }, 
+      "name": "Calisthenics, fast, pushups, situps\u0085"
+    }, 
+    {
+      "calories": {
+        "59": 236, 
+        "70": 281, 
+        "82": 327, 
+        "93": 372
+      }, 
+      "name": "Canoeing, camping trip"
+    }, 
+    {
+      "calories": {
+        "59": 177, 
+        "70": 211, 
+        "82": 245, 
+        "93": 279
+      }, 
+      "name": "Canoeing, rowing, light"
+    }, 
+    {
+      "calories": {
+        "59": 413, 
+        "70": 493, 
+        "82": 572, 
+        "93": 651
+      }, 
+      "name": "Canoeing, rowing, moderate"
+    }, 
+    {
+      "calories": {
+        "59": 708, 
+        "70": 844, 
+        "82": 981, 
+        "93": 1117
+      }, 
+      "name": "Canoeing, rowing, vigorous"
+    }, 
+    {
+      "calories": {
+        "59": 207, 
+        "70": 246, 
+        "82": 286, 
+        "93": 326
+      }, 
+      "name": "Carpentry, general"
+    }, 
+    {
+      "calories": {
+        "59": 354, 
+        "70": 422, 
+        "82": 490, 
+        "93": 558
+      }, 
+      "name": "Carrying 16 to 24 lbs, upstairs"
+    }, 
+    {
+      "calories": {
+        "59": 472, 
+        "70": 563, 
+        "82": 654, 
+        "93": 745
+      }, 
+      "name": "Carrying 25 to 49 lbs, upstairs"
+    }, 
+    {
+      "calories": {
+        "59": 472, 
+        "70": 563, 
+        "82": 654, 
+        "93": 745
+      }, 
+      "name": "Carrying heavy loads"
+    }, 
+    {
+      "calories": {
+        "59": 207, 
+        "70": 246, 
+        "82": 286, 
+        "93": 326
+      }, 
+      "name": "Carrying infant, level ground"
+    }, 
+    {
+      "calories": {
+        "59": 295, 
+        "70": 352, 
+        "82": 409, 
+        "93": 465
+      }, 
+      "name": "Carrying infant, upstairs"
+    }, 
+    {
+      "calories": {
+        "59": 472, 
+        "70": 563, 
+        "82": 654, 
+        "93": 745
+      }, 
+      "name": "Carrying moderate loads upstairs"
+    }, 
+    {
+      "calories": {
+        "59": 177, 
+        "70": 211, 
+        "82": 245, 
+        "93": 279
+      }, 
+      "name": "Carrying small children"
+    }, 
+    {
+      "calories": {
+        "59": 295, 
+        "70": 352, 
+        "82": 409, 
+        "93": 465
+      }, 
+      "name": "Children's games, hopscotch..."
+    }, 
+    {
+      "calories": {
+        "59": 472, 
+        "70": 563, 
+        "82": 654, 
+        "93": 745
+      }, 
+      "name": "Circuit training, minimal rest"
+    }, 
+    {
+      "calories": {
+        "59": 295, 
+        "70": 352, 
+        "82": 409, 
+        "93": 465
+      }, 
+      "name": "Cleaning gutters"
+    }, 
+    {
+      "calories": {
+        "59": 148, 
+        "70": 176, 
+        "82": 204, 
+        "93": 233
+      }, 
+      "name": "Cleaning, dusting"
+    }, 
+    {
+      "calories": {
+        "59": 413, 
+        "70": 493, 
+        "82": 572, 
+        "93": 651
+      }, 
+      "name": "Climbing hills, carrying up to 9 lbs"
+    }, 
+    {
+      "calories": {
+        "59": 443, 
+        "70": 528, 
+        "82": 613, 
+        "93": 698
+      }, 
+      "name": "Climbing hills, carrying 10 to 20 lb"
+    }, 
+    {
+      "calories": {
+        "59": 472, 
+        "70": 563, 
+        "82": 654, 
+        "93": 745
+      }, 
+      "name": "Climbing hills, carrying 21 to 42 lb"
+    }, 
+    {
+      "calories": {
+        "59": 531, 
+        "70": 633, 
+        "82": 735, 
+        "93": 838
+      }, 
+      "name": "Climbing hills, carrying over 42 lb"
+    }, 
+    {
+      "calories": {
+        "59": 236, 
+        "70": 281, 
+        "82": 327, 
+        "93": 372
+      }, 
+      "name": "Coaching: football,basketball,soccer"
+    }, 
+    {
+      "calories": {
+        "59": 354, 
+        "70": 422, 
+        "82": 490, 
+        "93": 558
+      }, 
+      "name": "Coal mining, general"
+    }, 
+    {
+      "calories": {
+        "59": 325, 
+        "70": 387, 
+        "82": 449, 
+        "93": 512
+      }, 
+      "name": "Construction, exterior, remodeling"
+    }, 
+    {
+      "calories": {
+        "59": 708, 
+        "70": 844, 
+        "82": 981, 
+        "93": 1117
+      }, 
+      "name": "Crew, sculling, rowing, competition"
+    }, 
+    {
+      "calories": {
+        "59": 295, 
+        "70": 352, 
+        "82": 409, 
+        "93": 465
+      }, 
+      "name": "Cricket (batting, bowling)"
+    }, 
+    {
+      "calories": {
+        "59": 148, 
+        "70": 176, 
+        "82": 204, 
+        "93": 233
+      }, 
+      "name": "Croquet"
+    }, 
+    {
+      "calories": {
+        "59": 413, 
+        "70": 493, 
+        "82": 572, 
+        "93": 651
+      }, 
+      "name": "Cross country snow skiing, slow"
+    }, 
+    {
+      "calories": {
+        "59": 472, 
+        "70": 563, 
+        "82": 654, 
+        "93": 745
+      }, 
+      "name": "Cross country skiing, moderate"
+    }, 
+    {
+      "calories": {
+        "59": 826, 
+        "70": 985, 
+        "82": 1144, 
+        "93": 1303
+      }, 
+      "name": "Cross country skiing, racing"
+    }, 
+    {
+      "calories": {
+        "59": 974, 
+        "70": 1161, 
+        "82": 1348, 
+        "93": 1536
+      }, 
+      "name": "Cross country skiing, uphill"
+    }, 
+    {
+      "calories": {
+        "59": 531, 
+        "70": 633, 
+        "82": 735, 
+        "93": 838
+      }, 
+      "name": "Cross country skiing, vigorous"
+    }, 
+    {
+      "calories": {
+        "59": 236, 
+        "70": 281, 
+        "82": 327, 
+        "93": 372
+      }, 
+      "name": "Curling"
+    }, 
+    {
+      "calories": {
+        "59": 236, 
+        "70": 281, 
+        "82": 327, 
+        "93": 372
+      }, 
+      "name": "Cycling, <10mph, leisure bicycling"
+    }, 
+    {
+      "calories": {
+        "59": 944, 
+        "70": 1126, 
+        "82": 1308, 
+        "93": 1489
+      }, 
+      "name": "Cycling, >20mph, racing"
+    }, 
+    {
+      "calories": {
+        "59": 354, 
+        "70": 422, 
+        "82": 490, 
+        "93": 558
+      }, 
+      "name": "Cycling, 10-11.9mph, light"
+    }, 
+    {
+      "calories": {
+        "59": 472, 
+        "70": 563, 
+        "82": 654, 
+        "93": 745
+      }, 
+      "name": "Cycling, 12-13.9mph, moderate"
+    }, 
+    {
+      "calories": {
+        "59": 590, 
+        "70": 704, 
+        "82": 817, 
+        "93": 931
+      }, 
+      "name": "Cycling, 14-15.9mph, vigorous"
+    }, 
+    {
+      "calories": {
+        "59": 708, 
+        "70": 844, 
+        "82": 981, 
+        "93": 1117
+      }, 
+      "name": "Cycling, 16-19mph, very fast, racing"
+    }, 
+    {
+      "calories": {
+        "59": 502, 
+        "70": 598, 
+        "82": 695, 
+        "93": 791
+      }, 
+      "name": "Cycling, mountain bike, bmx"
+    }, 
+    {
+      "calories": {
+        "59": 148, 
+        "70": 176, 
+        "82": 204, 
+        "93": 233
+      }, 
+      "name": "Darts (wall or lawn)"
+    }, 
+    {
+      "calories": {
+        "59": 177, 
+        "70": 211, 
+        "82": 245, 
+        "93": 279
+      }, 
+      "name": "Diving, springboard or platform"
+    }, 
+    {
+      "calories": {
+        "59": 354, 
+        "70": 422, 
+        "82": 490, 
+        "93": 558
+      }, 
+      "name": "Downhill snow skiing, moderate"
+    }, 
+    {
+      "calories": {
+        "59": 472, 
+        "70": 563, 
+        "82": 654, 
+        "93": 745
+      }, 
+      "name": "Downhill snow skiing, racing"
+    }, 
+    {
+      "calories": {
+        "59": 207, 
+        "70": 246, 
+        "82": 286, 
+        "93": 326
+      }, 
+      "name": "Electrical work, plumbing"
+    }, 
+    {
+      "calories": {
+        "59": 472, 
+        "70": 563, 
+        "82": 654, 
+        "93": 745
+      }, 
+      "name": "Farming, baling hay, cleaning barn"
+    }, 
+    {
+      "calories": {
+        "59": 236, 
+        "70": 281, 
+        "82": 327, 
+        "93": 372
+      }, 
+      "name": "Farming, chasing cattle on horseback"
+    }, 
+    {
+      "calories": {
+        "59": 266, 
+        "70": 317, 
+        "82": 368, 
+        "93": 419
+      }, 
+      "name": "Farming, feeding horses or cattle"
+    }, 
+    {
+      "calories": {
+        "59": 236, 
+        "70": 281, 
+        "82": 327, 
+        "93": 372
+      }, 
+      "name": "Farming, feeding small animals"
+    }, 
+    {
+      "calories": {
+        "59": 354, 
+        "70": 422, 
+        "82": 490, 
+        "93": 558
+      }, 
+      "name": "Farming, grooming animals"
+    }, 
+    {
+      "calories": {
+        "59": 354, 
+        "70": 422, 
+        "82": 490, 
+        "93": 558
+      }, 
+      "name": "Fencing"
+    }, 
+    {
+      "calories": {
+        "59": 649, 
+        "70": 774, 
+        "82": 899, 
+        "93": 1024
+      }, 
+      "name": "Fire fighter, climbing ladder, full gear"
+    }, 
+    {
+      "calories": {
+        "59": 472, 
+        "70": 563, 
+        "82": 654, 
+        "93": 745
+      }, 
+      "name": "Fire fighter, hauling hoses on ground"
+    }, 
+    {
+      "calories": {
+        "59": 148, 
+        "70": 176, 
+        "82": 204, 
+        "93": 233
+      }, 
+      "name": "Fishing from boat, sitting"
+    }, 
+    {
+      "calories": {
+        "59": 207, 
+        "70": 246, 
+        "82": 286, 
+        "93": 326
+      }, 
+      "name": "Fishing from riverbank, standing"
+    }, 
+    {
+      "calories": {
+        "59": 236, 
+        "70": 281, 
+        "82": 327, 
+        "93": 372
+      }, 
+      "name": "Fishing from riverbank, walking"
+    }, 
+    {
+      "calories": {
+        "59": 354, 
+        "70": 422, 
+        "82": 490, 
+        "93": 558
+      }, 
+      "name": "Fishing in stream, in waders"
+    }, 
+    {
+      "calories": {
+        "59": 177, 
+        "70": 211, 
+        "82": 245, 
+        "93": 279
+      }, 
+      "name": "Fishing, general"
+    }, 
+    {
+      "calories": {
+        "59": 118, 
+        "70": 141, 
+        "82": 163, 
+        "93": 186
+      }, 
+      "name": "Fishing, ice fishing"
+    }, 
+    {
+      "calories": {
+        "59": 118, 
+        "70": 141, 
+        "82": 163, 
+        "93": 186
+      }, 
+      "name": "Flying airplane (pilot)"
+    }, 
+    {
+      "calories": {
+        "59": 148, 
+        "70": 176, 
+        "82": 204, 
+        "93": 233
+      }, 
+      "name": "Football or baseball, playing catch"
+    }, 
+    {
+      "calories": {
+        "59": 531, 
+        "70": 633, 
+        "82": 735, 
+        "93": 838
+      }, 
+      "name": "Football, competitive"
+    }, 
+    {
+      "calories": {
+        "59": 472, 
+        "70": 563, 
+        "82": 654, 
+        "93": 745
+      }, 
+      "name": "Football, touch, flag, general"
+    }, 
+    {
+      "calories": {
+        "59": 1003, 
+        "70": 1196, 
+        "82": 1389, 
+        "93": 1582
+      }, 
+      "name": "Forestry, ax chopping, fast"
+    }, 
+    {
+      "calories": {
+        "59": 295, 
+        "70": 352, 
+        "82": 409, 
+        "93": 465
+      }, 
+      "name": "Forestry, ax chopping, slow"
+    }, 
+    {
+      "calories": {
+        "59": 649, 
+        "70": 774, 
+        "82": 899, 
+        "93": 1024
+      }, 
+      "name": "Forestry, carrying logs"
+    }, 
+    {
+      "calories": {
+        "59": 413, 
+        "70": 493, 
+        "82": 572, 
+        "93": 651
+      }, 
+      "name": "Forestry, sawing by hand"
+    }, 
+    {
+      "calories": {
+        "59": 531, 
+        "70": 633, 
+        "82": 735, 
+        "93": 838
+      }, 
+      "name": "Forestry, trimming trees"
+    }, 
+    {
+      "calories": {
+        "59": 177, 
+        "70": 211, 
+        "82": 245, 
+        "93": 279
+      }, 
+      "name": "Frisbee playing, general"
+    }, 
+    {
+      "calories": {
+        "59": 472, 
+        "70": 563, 
+        "82": 654, 
+        "93": 745
+      }, 
+      "name": "Frisbee, ultimate frisbee"
+    }, 
+    {
+      "calories": {
+        "59": 236, 
+        "70": 281, 
+        "82": 327, 
+        "93": 372
+      }, 
+      "name": "Gardening, general"
+    }, 
+    {
+      "calories": {
+        "59": 207, 
+        "70": 246, 
+        "82": 286, 
+        "93": 326
+      }, 
+      "name": "General cleaning"
+    }, 
+    {
+      "calories": {
+        "59": 177, 
+        "70": 211, 
+        "82": 245, 
+        "93": 279
+      }, 
+      "name": "Golf, driving range"
+    }, 
+    {
+      "calories": {
+        "59": 266, 
+        "70": 317, 
+        "82": 368, 
+        "93": 419
+      }, 
+      "name": "Golf, general"
+    }, 
+    {
+      "calories": {
+        "59": 177, 
+        "70": 211, 
+        "82": 245, 
+        "93": 279
+      }, 
+      "name": "Golf, miniature golf"
+    }, 
+    {
+      "calories": {
+        "59": 207, 
+        "70": 246, 
+        "82": 286, 
+        "93": 326
+      }, 
+      "name": "Golf, using power cart"
+    }, 
+    {
+      "calories": {
+        "59": 254, 
+        "70": 303, 
+        "82": 351, 
+        "93": 400
+      }, 
+      "name": "Golf, walking and pulling clubs"
+    }, 
+    {
+      "calories": {
+        "59": 266, 
+        "70": 317, 
+        "82": 368, 
+        "93": 419
+      }, 
+      "name": "Golf, walking and carrying clubs"
+    }
+  ]
+}
