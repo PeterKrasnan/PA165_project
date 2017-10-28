@@ -7,7 +7,7 @@ package com.muni.fi.pa165project.entity;
 
 import com.muni.fi.pa165project.enums.GenderEnum;
 import com.muni.fi.pa165project.enums.UserEnum;
-import com.muni.fi.pa165project.structures.UserSettings;
+import com.muni.fi.pa165project.structures.LoginDetails;
 import java.io.Serializable;
 import java.time.LocalDate;
 import java.util.HashSet;
@@ -57,7 +57,7 @@ public class User implements Serializable {
 
 	@Valid
 	@Embedded
-	private UserSettings settings = new UserSettings();
+	private LoginDetails loginDetails = new LoginDetails();
 	
 	public Long getId() {
 		return id;
@@ -123,12 +123,12 @@ public class User implements Serializable {
 		this.activityRecords = activityRecords;
 	}
 
-	public UserSettings getSettings() {
-		return settings;
+	public LoginDetails getLoginDetails() {
+		return loginDetails;
 	}
 
-	public void setSettings(UserSettings settings) {
-		this.settings = settings;
+	public void setLoginDetails(LoginDetails loginDetails) {
+		this.loginDetails = loginDetails;
 	}
 	
 	public void addRecord(Record record) {
@@ -139,7 +139,7 @@ public class User implements Serializable {
 	@Override
 	public int hashCode() {
 		int hash = 7;
-		hash = 97 * hash + this.settings.getUsername().hashCode();
+		hash = 97 * hash + this.loginDetails.getUsername().hashCode();
 		return hash;
 	}
 
@@ -156,7 +156,7 @@ public class User implements Serializable {
 		}
 		final User other = (User) obj;
 		
-		return this.settings.getUsername().equals(other.settings.getUsername());
+		return this.loginDetails.getUsername().equals(other.loginDetails.getUsername());
 	}
 	
 }

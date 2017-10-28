@@ -5,7 +5,7 @@ import com.muni.fi.pa165project.entity.Activity;
 import com.muni.fi.pa165project.entity.Record;
 import com.muni.fi.pa165project.entity.User;
 import com.muni.fi.pa165project.enums.GenderEnum;
-import com.muni.fi.pa165project.structures.UserSettings;
+import com.muni.fi.pa165project.structures.LoginDetails;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.List;
@@ -54,11 +54,11 @@ public class RecordDaoImplTest {
         this.user.setName("Radim");
         this.user.setGender(GenderEnum.MALE);
         this.user.setBirthDate(LocalDate.now());
-        UserSettings settings = new UserSettings();
-        settings.setUsername("rpo");
-        settings.setPassword("123");
-        settings.setEmail("rp@see.com");
-        this.user.setSettings(settings);
+        LoginDetails login = new LoginDetails();
+        login.setUsername("rpo");
+        login.setPassword("123");
+        login.setEmail("rp@see.com");
+        this.user.setLoginDetails(login);
     }
     
     @Before

@@ -16,7 +16,7 @@ import org.hibernate.validator.constraints.Email;
  * @author Radoslav Karlik
  */
 @Embeddable
-public class UserSettings implements Serializable {
+public class LoginDetails implements Serializable {
 	
 	@Column(nullable = false, unique = true)
 	private String username;
