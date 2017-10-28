@@ -24,7 +24,7 @@ public class UserDaoImpl implements UserDao {
 
     @Override
     public User findByUserName(String username) {
-        TypedQuery<User> query = em.createQuery("SELECT u FROM User u WHERE u.settings.username LIKE :username", User.class);
+        TypedQuery<User> query = em.createQuery("SELECT u FROM User u WHERE u.settings.username = :username", User.class);
         query.setParameter("username", username);
 
         return query.getSingleResult();
