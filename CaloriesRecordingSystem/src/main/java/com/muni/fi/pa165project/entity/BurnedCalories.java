@@ -92,10 +92,10 @@ public class BurnedCalories implements Serializable{
             return false;
         
         if (upperWeightBoundary != other.upperWeightBoundary)
-          return false;
+            return false;
         
         if (amount != other.amount)
-          return false;
+            return false;
         
         return true;
     }

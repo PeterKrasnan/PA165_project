@@ -1,11 +1,8 @@
 package com.muni.fi.pa165project.entity;
 
 import java.io.Serializable;
-import java.util.ArrayList;
 import java.util.HashSet;
-import java.util.List;
 import java.util.Set;
-
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.EnumType;
@@ -15,22 +12,12 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Column;
 import javax.persistence.OneToMany;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
-import javax.persistence.Table;
-import javax.persistence.UniqueConstraint;
-import org.hibernate.annotations.Immutable;
-
 import com.muni.fi.pa165project.enums.Category;
-
-
-
 
 /**
  *
  * @author Lukáš Císar
  */
-
 @Entity
 public class Activity implements Serializable {
 	
@@ -45,8 +32,7 @@ public class Activity implements Serializable {
 	
 	@Enumerated(EnumType.STRING)
 	private Category category;
-	
-		
+
 	@OneToMany(cascade = CascadeType.ALL, mappedBy = "activity", orphanRemoval = true)
 	private Set<BurnedCalories> burnedCalories = new HashSet<BurnedCalories>();
 		
@@ -66,69 +52,60 @@ public class Activity implements Serializable {
 		this.name = name;
 	}
 
-	public String getDescription() {
-		return description;
-	}
+    public String getDescription() {
+        return description;
+    }
 
-	public void setDescription(String description) {
-		this.description = description;
-	}
-	
+    public void setDescription(String description) {
+        this.description = description;
+    }
+    
+    public Category getCategory() {
+      return category;
+    }
+    
+    public void setCategory(Category category) {
+      this.category = category;
+    }
+    
+    public Set<BurnedCalories> getBurnedCalories() {
+      return burnedCalories;
+    }
+    
+    public void setBurnedCalories(Set<BurnedCalories> burnedCalories) {
+      this.burnedCalories = burnedCalories;
+    }
+    
 	public void addBurnedCaloriesItem(BurnedCalories burnedCaloriesItem){
 		this.burnedCalories.add(burnedCaloriesItem);
 		burnedCaloriesItem.setActivity(this);
-}
-	
+	}
 	
 	@Override
 	public int hashCode() {
 
 		int result = 17;
         result = 31 * result + name.hashCode();
-        result = 31 * result + category.hashCode();
-        result = 31 * result + description.hashCode();
         return result;
-		
 	}
-	
-	@Override
+
+    @Override
     public boolean equals(Object obj) {
-		
-            if (this == obj)
-                    return true;
-            if (obj == null)
-                    return false;
-            if (!(obj instanceof Activity))
-                    return false;
-            
-            final Activity other = (Activity) obj;
+  
+        if (this == obj)
+            return true;
+        if (obj == null)
+            return false;
+        if (!(obj instanceof Activity))
+            return false;
+    
+        final Activity other = (Activity) obj;
+    
+        if (name == null) {
+            return false;
+        } else if (!name.equals(other.name))
+            return false;
 
-            if (name == null){
-            	return false;
-            }else{
-            	if (!name.equals(other.name)) {
-            		return false;
-            	}
-            }
-
-            if (description == null){
-            	return false;
-            }else{
-            	if (!description.equals(other.description)) {
-            		return false;
-            	}
-            }
-            
-            if (category == null){
-            	return false;
-            }else{
-            	if (!category.equals(other.category)) {
-            		return false;
-            	}
-            }
-
-   return true;
+        return true;
     }
-	
-	
-	}
+}
