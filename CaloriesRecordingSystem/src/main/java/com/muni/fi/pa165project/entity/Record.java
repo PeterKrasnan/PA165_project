@@ -8,16 +8,18 @@ import java.time.LocalDateTime;
  * @author Peter Krasnan
  */
 @Entity
+@Table(uniqueConstraints = {@UniqueConstraint(columnNames = {"user_id", "atTime"})})
 public class Record implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @ManyToOne(optional=false)
+    @ManyToOne(optional = false)
     private Activity activity;
 
-    @ManyToOne(optional=false)
+    @ManyToOne(optional = false)
+    @JoinColumn(name = "user_id")
     private User user;
 
     @Column(nullable = false)
@@ -101,11 +103,7 @@ public class Record implements Serializable {
         int result = 1;
         result = prime * result + ((user == null) ? 0 : user.hashCode());
         result = prime * result + ((atTime == null) ? 0 : atTime.hashCode());
-        result = prime * result + ((activity == null) ? 0 : activity.hashCode());
-        result = prime * result + ((int)weight);
-        result = prime * result + burnedCalories;
-        result = prime * result + distance;
-        result = prime * result + duration;
+
         return result;
     }
 
@@ -124,14 +122,6 @@ public class Record implements Serializable {
 
         final Record other = (Record) obj;
 
-        if (activity == null) {
-            return false;
-        } else {
-            if (!activity.equals(other.activity)) {
-                return false;
-            }
-        }
-
         if (user == null) {
             return false;
         } else {
@@ -147,31 +137,6 @@ public class Record implements Serializable {
                 return false;
             }
         }
-
-        if (user == null) {
-            return false;
-        } else {
-            if (!user.equals(other.user)) {
-                return false;
-            }
-        }
-
-        if (weight != other.weight) {
-            return false;
-        }
-
-        if (distance != other.distance) {
-            return false;
-        }
-
-        if (duration != other.duration) {
-            return false;
-        }
-
-        if (burnedCalories != other.burnedCalories) {
-            return false;
-        }
-
         return true;
     }
 }
