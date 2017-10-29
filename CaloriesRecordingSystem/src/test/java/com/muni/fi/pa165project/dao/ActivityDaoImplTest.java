@@ -44,7 +44,6 @@ public class ActivityDaoImplTest {
         Activity a = new Activity();
 
         a.setName("A Activity");
-        a.setBurnedCaloriesRecords(null);
         a.setDescription("");
 
         this.activityDao.create(a);
