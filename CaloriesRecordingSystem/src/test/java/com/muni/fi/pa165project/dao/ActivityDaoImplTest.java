@@ -2,6 +2,7 @@ package com.muni.fi.pa165project.dao;
 
 import com.muni.fi.pa165project.config.TestConfig;
 import com.muni.fi.pa165project.entity.Activity;
+import com.muni.fi.pa165project.enums.Category;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
@@ -28,35 +29,12 @@ public class ActivityDaoImplTest {
 
     private Activity activity;
 
-    //private Set<BurnedCalories> burnedCaloriesRecords;
-
     @Before
     public void init() {
         activity = new Activity();
         activity.setDescription("description");
         activity.setName("Initial Activity");
-
-        //            setBurnedCaloriesRecords( burnedCaloriesRecords);
-        //        burnedCaloriesRecords = new HashSet<BurnedCalories>() {
-        //            {
-        //                add(new BurnedCalories() {{
-        //                    setWeightRange(50);
-        //                    setActivity(activity);
-        //                    setDifficulty(Difficulty.EASY);
-        //                }});
-        //                add(new BurnedCalories() {{
-        //                    setWeightRange(100);
-        //                    setActivity(activity);
-        //                    setDifficulty(Difficulty.HARD);
-        //                }});
-        //                add(new BurnedCalories() {{
-        //                    setWeightRange(200);
-        //                    setActivity(activity);
-        //                    setDifficulty(Difficulty.HARD);
-        //                }});
-        //            }
-        //        };
-
+        activity.setCategory(Category.AEROBICS);
         activityDao.create(activity);
     }
 
@@ -133,15 +111,15 @@ public class ActivityDaoImplTest {
         Assert.assertTrue("Activities does not contain right activity", activities.contains(activity));
     }
 
-//    @Test
-    //    @Rollback(true)
-    //    public void findByDifficulty() {
-    //        List<Activity> activities = activityDao.findByDifficulty(Difficulty.HARD);
-    //
-    //        Assert.assertTrue("Activities is null", activities != null);
-    //        Assert.assertTrue("Activities are empty", !activities.isEmpty());
-    //        Assert.assertTrue("Activities have incorrect number of results", activities.size() == 2);
-    //    }
+    @Test
+    @Rollback(true)
+    public void findByCategoryTest() {
+        List<Activity> activities = activityDao.findByCategory(Category.AEROBICS);
+
+        Assert.assertTrue("Activities is null", activities != null);
+        Assert.assertTrue("Activities are empty", !activities.isEmpty());
+        Assert.assertTrue("Activities have incorrect number of results", activities.size() == 1);
+    }
 
 
 }
